@@ -1,7 +1,8 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { QuoteData, QuoteSummary } from '../types';
-import { formatCurrency, formatDateForDisplay } from '../data/services';
+import { formatCurrency } from '../data/services';
+import { formatDateForDisplay } from '../utils/date';
 
 const COMPANY_DETAILS = {
   name: 'ACHU Ltd',

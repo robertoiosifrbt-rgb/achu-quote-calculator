@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { QuoteData, ClientDetails, Service, ServiceType } from '../types';
+import { QuoteData, ClientDetails, Service } from '../types';
 import { DEFAULT_HOURLY_RATE, generateQuoteNumber, calculatePrice } from '../data/services';
 import { getCurrentDate, getDateSevenDaysAhead } from '../utils/date';
 

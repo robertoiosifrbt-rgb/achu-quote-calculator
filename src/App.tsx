@@ -1,4 +1,3 @@
-import React from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline, Box } from '@mui/material';
 import { theme } from './styles/theme';

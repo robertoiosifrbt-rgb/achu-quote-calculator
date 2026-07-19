@@ -10,20 +10,19 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-hook-form": "^7.51.3",
-    "@mui/material": "^5.14.19",
-    "@mui/icons-material": "^5.14.19",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.19",
+    "@mui/material": "^5.14.19",
     "jspdf": "^2.5.1",
-    "jspdf-autotable": "^3.5.33"
+    "jspdf-autotable": "^3.5.33",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.51.3"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "@types/jspdf": "^2.5.8",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"

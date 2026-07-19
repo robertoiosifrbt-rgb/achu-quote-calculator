@@ -36,7 +36,7 @@ export const ServiceForm: React.FC = () => {
     (opt) => opt.label === selectedOption
   );
 
-  const estimatedPrice = selectedServiceOption
+  const estimatedPrice = selectedServiceOption && hourlyRate
     ? calculatePrice(selectedServiceOption.minutes, hourlyRate)
     : 0;
 
@@ -46,7 +46,7 @@ export const ServiceForm: React.FC = () => {
         type: selectedServiceType,
         selectedOption,
         minutes: selectedServiceOption.minutes,
-        hourlyRate,
+        hourlyRate: hourlyRate || 0,
         price: estimatedPrice,
       });
 
@@ -130,7 +130,7 @@ export const ServiceForm: React.FC = () => {
                 <strong>Minutes:</strong> {selectedServiceOption.minutes}
               </Typography>
               <Typography variant="body2">
-                <strong>Rate:</strong> £{hourlyRate.toFixed(2)}/hr
+                <strong>Rate:</strong> £{(hourlyRate || 0).toFixed(2)}/hr
               </Typography>
               <Typography variant="body2" sx={{ color: '#667eea', fontWeight: 600 }}>
                 <strong>Price:</strong> {formatCurrency(estimatedPrice)}

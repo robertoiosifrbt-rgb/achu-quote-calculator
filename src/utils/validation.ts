@@ -20,15 +20,15 @@ export const validateAddress = (address: string): boolean => {
   return address.trim().length > 0;
 };
 
-export const validateEmail = (email: string): boolean | string => {
-  if (email.trim() === '') {
+export const validateEmail = (email: string | undefined): boolean | string => {
+  if (!email || email.trim() === '') {
     return true; // Optional field
   }
   return isValidEmail(email) || 'Invalid email format';
 };
 
-export const validatePhone = (phone: string): boolean | string => {
-  if (phone.trim() === '') {
+export const validatePhone = (phone: string | undefined): boolean | string => {
+  if (!phone || phone.trim() === '') {
     return true; // Optional field
   }
   return isValidPhoneNumber(phone) || 'Invalid phone number';

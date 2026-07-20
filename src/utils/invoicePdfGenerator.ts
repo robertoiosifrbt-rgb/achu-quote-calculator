@@ -1,7 +1,7 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { QuoteData, QuoteSummary } from '../types';
-import { formatCurrency } from '../data/services';
+import { formatCurrency, generateInvoiceNumber } from '../data/services';
 import { formatDateForDisplay } from '../utils/date';
 import logo from '../assets/logo.jpeg';
 
@@ -65,13 +65,15 @@ const SOCIAL_ICONS_SVG = {
   youtube: '/src/assets/icons/youtube.svg',
 };
 
-export const generatePDF = async (quoteData: QuoteData, summary: QuoteSummary): Promise<void> => {
-const doc = new jsPDF({
+export const generateInvoicePDF = async (quoteData: QuoteData, summary: QuoteSummary): Promise<void> => {
+  const doc = new jsPDF({
     orientation: 'portrait',
     unit: 'mm',
     format: 'a4',
   });
- 
+
+  // Generate invoice number
+  const invoiceNumber = generateInvoiceNumber();
 
   // Fetch and convert SVGs to PNG data URIs
   const [phoneSvgContent, emailSvgContent, websiteSvgContent, facebookSvgContent, instagramSvgContent, tiktokSvgContent, youtubeSvgContent] = await Promise.all([
@@ -148,14 +150,14 @@ const doc = new jsPDF({
     contactY += contactLineSpacing;
   });
 
-  // Quote Number and Date
+  // Invoice Number and Date
   doc.setFontSize(10);
   doc.setFont('helvetica', 'normal');
-  doc.text(`Quote #: ${quoteData.quoteNumber}`, pageWidth - margin, 12, { align: 'right' });
+  doc.text(`Invoice #: ${invoiceNumber}`, pageWidth - margin, 12, { align: 'right' });
   doc.text(`Date: ${formatDateForDisplay(quoteData.quoteDate)}`, pageWidth - margin, 18, {
     align: 'right',
   });
-  doc.text(`Valid until: ${formatDateForDisplay(quoteData.validUntil)}`, pageWidth - margin, 24, {
+  doc.text(`Due date: ${formatDateForDisplay(quoteData.validUntil)}`, pageWidth - margin, 24, {
     align: 'right',
   });
 
@@ -190,12 +192,12 @@ const doc = new jsPDF({
 
   yPosition += 5;
 
-  // Services Table
+  // Services Table - Invoice version (no Duration column)
   const serviceTableData = quoteData.services.map((service) => [
-  `${service.type}\n${service.selectedOption}`,
-  String(service.quantity ?? 1),
-  formatCurrency(service.price),
-]); 
+    `${service.type}\n${service.selectedOption}`,
+    String(service.quantity ?? 1),
+    formatCurrency(service.price),
+  ]);
 
   autoTable(doc, {
     head: [['Service', 'Quantity', 'Price']],
@@ -229,17 +231,15 @@ const doc = new jsPDF({
   doc.setFont('helvetica', 'normal');
 
   const summaryData: Array<[string, string]> = [
-  ['Subtotal:', formatCurrency(summary.subtotal)],
-  ...(summary.discountAmount > 0
-    ? [
-        [
+    ['Subtotal:', formatCurrency(summary.subtotal)],
+    ...(summary.discountAmount > 0
+      ? [[
           'Discount:',
           `-${formatCurrency(summary.discountAmount)}`,
-        ] as [string, string],
-      ]
-    : []),
-  ['Grand Total:', formatCurrency(summary.grandTotal)],
-];
+        ]]
+      : []),
+    ['Grand Total:', formatCurrency(summary.grandTotal)],
+  ];
 
   const columnWidth = (pageWidth - margin * 2) / 2;
 
@@ -258,153 +258,153 @@ const doc = new jsPDF({
   });
 
   // Footer
-yPosition = pageHeight - 34;
+  yPosition = pageHeight - 34;
 
-const footerBlue: [number, number, number] = [40, 100, 200];
+  const footerBlue: [number, number, number] = [40, 100, 200];
 
-type FooterItem = {
-  imageData?: string;
-  icon?: string;
-  label: string;
-  url: string;
-};
+  type FooterItem = {
+    imageData?: string;
+    icon?: string;
+    label: string;
+    url: string;
+  };
 
-const drawFooterRow = (
-  items: FooterItem[],
-  y: number,
-  fontSize = 10,
-  gap = 8
-): void => {
-  const iconSize = 6;
-  const iconTextGap = 2;
+  const drawFooterRow = (
+    items: FooterItem[],
+    y: number,
+    fontSize = 10,
+    gap = 8
+  ): void => {
+    const iconSize = 6;
+    const iconTextGap = 2;
 
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(fontSize);
-
-  const itemWidths = items.map(
-    (item) => iconSize + iconTextGap + doc.getTextWidth(item.label)
-  );
-
-  const totalWidth =
-    itemWidths.reduce((total, width) => total + width, 0) +
-    gap * (items.length - 1);
-
-  let currentX = (pageWidth - totalWidth) / 2;
-
-  items.forEach((item, index) => {
-    const itemWidth = itemWidths[index];
-    const iconX = currentX;
-    const iconY = y - iconSize / 2 - 0.5;
-
-    // Draw SVG icon or text icon
-    if (item.imageData) {
-      doc.addImage(item.imageData, 'PNG', iconX, iconY, iconSize, iconSize);
-    } else if (item.icon) {
-      // Fallback to text icon for non-image items
-      doc.setFillColor(...footerBlue);
-      doc.circle(iconX + iconSize / 2, y - 1.2, iconSize / 2 - 0.5, 'F');
-
-      doc.setTextColor(255, 255, 255);
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(item.icon.length > 1 ? 5.5 : 7);
-      doc.text(item.icon, iconX + iconSize / 2, y + 0.5, {
-        align: 'center'
-      });
-    }
-
-    // Link text
-    const textX = currentX + iconSize + iconTextGap;
-
-    doc.setTextColor(...footerBlue);
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(fontSize);
-    doc.text(item.label, textX, y);
 
-    // Clickable area: icon + text
-    doc.link(
-      currentX,
-      y - 4.5,
-      itemWidth,
-      6,
-      { url: item.url }
+    const itemWidths = items.map(
+      (item) => iconSize + iconTextGap + doc.getTextWidth(item.label)
     );
 
-    currentX += itemWidth + gap;
-  });
-};
+    const totalWidth =
+      itemWidths.reduce((total, width) => total + width, 0) +
+      gap * (items.length - 1);
 
-// Company name
-doc.setTextColor(...footerBlue);
-doc.setFont('helvetica', 'bold');
-doc.setFontSize(12);
-doc.text(
-  COMPANY_DETAILS.name,
-  pageWidth / 2,
-  yPosition,
-  { align: 'center' }
-);
+    let currentX = (pageWidth - totalWidth) / 2;
 
-yPosition += 8;
+    items.forEach((item, index) => {
+      const itemWidth = itemWidths[index];
+      const iconX = currentX;
+      const iconY = y - iconSize / 2 - 0.5;
 
-// Phone, email and website
-drawFooterRow(
-  [
-    {
-      imageData: allIcons.phone,
-      label: COMPANY_DETAILS.phone,
-      url: `tel:${COMPANY_DETAILS.phone.replace(/\s+/g, '')}`
-    },
-    {
-      imageData: allIcons.email,
-      label: COMPANY_DETAILS.email,
-      url: `mailto:${COMPANY_DETAILS.email}`
-    },
-    {
-      imageData: allIcons.website,
-      label: 'www.achu.uk',
-      url: COMPANY_DETAILS.website
-    }
-  ],
-  yPosition,
-  10
-);
+      // Draw SVG icon or text icon
+      if (item.imageData) {
+        doc.addImage(item.imageData, 'PNG', iconX, iconY, iconSize, iconSize);
+      } else if (item.icon) {
+        // Fallback to text icon for non-image items
+        doc.setFillColor(...footerBlue);
+        doc.circle(iconX + iconSize / 2, y - 1.2, iconSize / 2 - 0.5, 'F');
 
-yPosition += 8;
+        doc.setTextColor(255, 255, 255);
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(item.icon.length > 1 ? 5.5 : 7);
+        doc.text(item.icon, iconX + iconSize / 2, y + 0.5, {
+          align: 'center'
+        });
+      }
 
-// Social media
-drawFooterRow(
-  [
-    {
-      imageData: allIcons.facebook,
-      label: 'Facebook',
-      url: COMPANY_DETAILS.facebook
-    },
-    {
-      imageData: allIcons.instagram,
-      label: 'Instagram',
-      url: COMPANY_DETAILS.instagram
-    },
-    {
-      imageData: allIcons.tiktok,
-      label: 'TikTok',
-      url: COMPANY_DETAILS.tiktok
-    },
-    {
-      imageData: allIcons.youtube,
-      label: 'YouTube',
-      url: COMPANY_DETAILS.youtube
-    }
-  ],
-  yPosition,
-  10,
-  7
-);
+      // Link text
+      const textX = currentX + iconSize + iconTextGap;
 
-// Reset document styling
-doc.setFont('helvetica', 'normal');
-doc.setFontSize(10);
-doc.setTextColor(0, 0, 0);
+      doc.setTextColor(...footerBlue);
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(fontSize);
+      doc.text(item.label, textX, y);
 
-// Save PDF
-doc.save(`ACHU-Quote-${quoteData.quoteNumber}.pdf`);
+      // Clickable area: icon + text
+      doc.link(
+        currentX,
+        y - 4.5,
+        itemWidth,
+        6,
+        { url: item.url }
+      );
+
+      currentX += itemWidth + gap;
+    });
+  };
+
+  // Company name
+  doc.setTextColor(...footerBlue);
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(12);
+  doc.text(
+    COMPANY_DETAILS.name,
+    pageWidth / 2,
+    yPosition,
+    { align: 'center' }
+  );
+
+  yPosition += 8;
+
+  // Phone, email and website
+  drawFooterRow(
+    [
+      {
+        imageData: allIcons.phone,
+        label: COMPANY_DETAILS.phone,
+        url: `tel:${COMPANY_DETAILS.phone.replace(/\s+/g, '')}`
+      },
+      {
+        imageData: allIcons.email,
+        label: COMPANY_DETAILS.email,
+        url: `mailto:${COMPANY_DETAILS.email}`
+      },
+      {
+        imageData: allIcons.website,
+        label: 'www.achu.uk',
+        url: COMPANY_DETAILS.website
+      }
+    ],
+    yPosition,
+    10
+  );
+
+  yPosition += 8;
+
+  // Social media
+  drawFooterRow(
+    [
+      {
+        imageData: allIcons.facebook,
+        label: 'Facebook',
+        url: COMPANY_DETAILS.facebook
+      },
+      {
+        imageData: allIcons.instagram,
+        label: 'Instagram',
+        url: COMPANY_DETAILS.instagram
+      },
+      {
+        imageData: allIcons.tiktok,
+        label: 'TikTok',
+        url: COMPANY_DETAILS.tiktok
+      },
+      {
+        imageData: allIcons.youtube,
+        label: 'YouTube',
+        url: COMPANY_DETAILS.youtube
+      }
+    ],
+    yPosition,
+    10,
+    7
+  );
+
+  // Reset document styling
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(10);
+  doc.setTextColor(0, 0, 0);
+
+  // Save PDF
+  doc.save(`ACHU-Invoice-${invoiceNumber}.pdf`);
 };

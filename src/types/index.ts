@@ -26,6 +26,7 @@ export interface Service {
   minutes: number;
   hourlyRate: number;
   price: number;
+  quantity: number;
 }
 
 export interface ClientDetails {

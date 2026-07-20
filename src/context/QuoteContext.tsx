@@ -53,7 +53,6 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({
   const addService = useCallback(
     (service: Omit<Service, 'id'>) => {
       const id = `service-${Date.now()}-${Math.random()}`;
-      const price = calculatePrice(service.minutes, service.hourlyRate);
       setQuoteData((prev) => ({
         ...prev,
         services: [
@@ -61,7 +60,6 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({
           {
             ...service,
             id,
-            price,
           },
         ],
       }));
@@ -78,10 +76,6 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({
             ? {
                 ...service,
                 ...updatedService,
-                price: calculatePrice(
-                  updatedService.minutes,
-                  updatedService.hourlyRate
-                ),
               }
             : service
         ),
@@ -114,7 +108,7 @@ export const QuoteProvider: React.FC<{ children: React.ReactNode }> = ({
       services: prev.services.map((service) => ({
         ...service,
         hourlyRate: rate,
-        price: calculatePrice(service.minutes, rate),
+        price: calculatePrice(service.minutes, rate) * service.quantity,
       })),
     }));
   }, []);

@@ -7,22 +7,25 @@ import {
   Box,
   Typography,
 } from '@mui/material';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, useForm, useWatch } from 'react-hook-form';
 import { ClientDetails } from '../../types';
 import { useQuote } from '../../context/QuoteContext';
 import { validateEmail, validatePhone } from '../../utils/validation';
 
 export const ClientDetailsForm: React.FC = () => {
   const { quoteData, updateClientDetails } = useQuote();
-  const { control, watch } = useForm<ClientDetails>({
+  const { control } = useForm<ClientDetails>({
     defaultValues: quoteData.clientDetails,
   });
 
-  const formValues = watch();
+  const name = useWatch({ control, name: 'name' });
+  const address = useWatch({ control, name: 'address' });
+  const phone = useWatch({ control, name: 'phone' });
+  const email = useWatch({ control, name: 'email' });
 
   useEffect(() => {
-    updateClientDetails(formValues);
-  }, [formValues, updateClientDetails]);
+    updateClientDetails({ name, address, phone, email });
+  }, [name, address, phone, email, updateClientDetails]);
 
   return (
     <Card sx={{ mb: 3 }}>

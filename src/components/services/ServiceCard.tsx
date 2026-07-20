@@ -32,6 +32,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [editedHourlyRate, setEditedHourlyRate] = useState(service.hourlyRate);
+  const [editedQuantity, setEditedQuantity] = useState(service.quantity);
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -43,6 +44,8 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   };
 
   const handleEditOpen = () => {
+    setEditedHourlyRate(service.hourlyRate);
+    setEditedQuantity(service.quantity);
     setEditDialogOpen(true);
     handleMenuClose();
   };
@@ -52,10 +55,12 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   };
 
   const handleSaveEdit = () => {
+    const basePrice = (service.minutes / 60) * editedHourlyRate;
     updateService(service.id, {
       ...service,
       hourlyRate: editedHourlyRate,
-      price: (service.minutes / 60) * editedHourlyRate,
+      quantity: editedQuantity,
+      price: basePrice * editedQuantity,
     });
     handleEditClose();
   };
@@ -96,7 +101,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
               <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
                 {service.type}
               </Typography>
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 1.5 }}>
+              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr 1fr' }, gap: 1.5 }}>
                 <Box>
                   <Typography variant="caption" color="textSecondary">
                     Service
@@ -119,6 +124,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
                   </Typography>
                   <Typography variant="body2" sx={{ fontWeight: 500 }}>
                     {formatCurrency(service.hourlyRate)}/hr
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography variant="caption" color="textSecondary">
+                    Quantity
+                  </Typography>
+                  <Typography variant="body2" sx={{ fontWeight: 500 }}>
+                    {service.quantity}
                   </Typography>
                 </Box>
               </Box>
@@ -185,13 +198,24 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
             fullWidth
             size="small"
             variant="outlined"
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            label="Quantity"
+            type="number"
+            inputProps={{ min: '1', step: '1' }}
+            value={editedQuantity}
+            onChange={(e) => setEditedQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+            fullWidth
+            size="small"
+            variant="outlined"
           />
           <Box sx={{ mt: 2, p: 1.5, backgroundColor: '#f9f9f9', borderRadius: 1 }}>
             <Typography variant="caption" color="textSecondary">
-              New Price:
+              Base Price: {formatCurrency((service.minutes / 60) * editedHourlyRate)} × {editedQuantity} = New Total:
             </Typography>
             <Typography variant="h6" sx={{ fontWeight: 600, color: '#667eea' }}>
-              {formatCurrency((service.minutes / 60) * editedHourlyRate)}
+              {formatCurrency((service.minutes / 60) * editedHourlyRate * editedQuantity)}
             </Typography>
           </Box>
         </DialogContent>

@@ -3,6 +3,7 @@ import { Button, Box } from '@mui/material';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import { useQuote } from '../../context/QuoteContext';
 import { generatePDF } from '../../utils/pdfGenerator';
+import { generateInvoicePDF } from '../../utils/invoicePdfGenerator';
 import { useSnackbar } from '../../hooks/useSnackbar';
 
 export const PDFGenerator: React.FC = () => {
@@ -28,7 +29,7 @@ export const PDFGenerator: React.FC = () => {
         grandTotal: getGrandTotal(),
       };
 
-      generatePDF(quoteData, summaryData);
+      await generatePDF(quoteData, summaryData);
       showSnackbar('PDF generated successfully', 'success');
     } catch (error) {
       console.error('Error generating PDF:', error);
@@ -36,8 +37,35 @@ export const PDFGenerator: React.FC = () => {
     }
   };
 
+  const handleGenerateInvoice = async () => {
+    try {
+      if (!quoteData.clientDetails.name || !quoteData.clientDetails.address) {
+        showSnackbar('Please fill in client details first', 'warning');
+        return;
+      }
+
+      if (quoteData.services.length === 0) {
+        showSnackbar('Please add at least one service', 'warning');
+        return;
+      }
+
+      const summaryData = {
+        totalMinutes: getTotalMinutes(),
+        subtotal: getSubtotal(),
+        discountAmount: getDiscountAmount(),
+        grandTotal: getGrandTotal(),
+      };
+
+      await generateInvoicePDF(quoteData, summaryData);
+      showSnackbar('Invoice generated successfully', 'success');
+    } catch (error) {
+      console.error('Error generating Invoice:', error);
+      showSnackbar('Error generating Invoice', 'error');
+    }
+  };
+
   return (
-    <Box sx={{ mb: 3 }}>
+    <Box sx={{ mb: 3, display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2 }}>
       <Button
         variant="contained"
         color="error"
@@ -48,6 +76,17 @@ export const PDFGenerator: React.FC = () => {
         sx={{ borderRadius: 1, py: 1.5, fontWeight: 600 }}
       >
         Generate PDF Quote
+      </Button>
+      <Button
+        variant="contained"
+        color="success"
+        startIcon={<PictureAsPdfIcon />}
+        onClick={handleGenerateInvoice}
+        fullWidth
+        size="large"
+        sx={{ borderRadius: 1, py: 1.5, fontWeight: 600 }}
+      >
+        Generate PDF Invoice
       </Button>
     </Box>
   );

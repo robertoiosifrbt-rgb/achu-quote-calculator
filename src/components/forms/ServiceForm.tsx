@@ -19,6 +19,8 @@ export const ServiceForm: React.FC = () => {
   const { quoteData, addService } = useQuote();
   const [selectedServiceType, setSelectedServiceType] = useState<ServiceType | ''>('');
   const [selectedOption, setSelectedOption] = useState<string>('');
+  const [customMinutes, setCustomMinutes] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(1);
 
   const { control, watch, reset } = useForm<Partial<Service>>({
     defaultValues: {
@@ -32,26 +34,39 @@ export const ServiceForm: React.FC = () => {
     (s) => s.name === selectedServiceType
   );
 
-  const selectedServiceOption = serviceDefinition?.options.find(
+  const serviceOptions = serviceDefinition?.options ?? [];
+
+  const selectedServiceOption = serviceOptions.find(
     (opt) => opt.label === selectedOption
   );
 
-  const estimatedPrice = selectedServiceOption && hourlyRate
-    ? calculatePrice(selectedServiceOption.minutes, hourlyRate)
+ const minutesToUse =
+  customMinutes > 0
+    ? customMinutes
+    : selectedServiceOption?.minutes ?? 0;
+
+const basePrice =
+  selectedServiceOption && hourlyRate
+    ? calculatePrice(minutesToUse, hourlyRate)
     : 0;
+
+const estimatedPrice = basePrice * quantity;
 
   const handleAddService = () => {
     if (selectedServiceType && selectedOption && selectedServiceOption) {
       addService({
-        type: selectedServiceType,
-        selectedOption,
-        minutes: selectedServiceOption.minutes,
-        hourlyRate: hourlyRate || 0,
-        price: estimatedPrice,
-      });
+  type: selectedServiceType,
+  selectedOption,
+  minutes: minutesToUse,
+  hourlyRate: hourlyRate || 0,
+  price: estimatedPrice,
+  quantity,
+});
 
       setSelectedServiceType('');
       setSelectedOption('');
+      setCustomMinutes(0);
+      setQuantity(1);
       reset({ hourlyRate });
     }
   };
@@ -102,6 +117,15 @@ export const ServiceForm: React.FC = () => {
               </MenuItem>
             ))}
           </TextField>
+          <TextField
+  label="Duration (minutes)"
+  type="number"
+  value={customMinutes || ''}
+  onChange={(e) => setCustomMinutes(Number(e.target.value))}
+  fullWidth
+  size="small"
+  inputProps={{ min: 1 }}
+/>
 
           <Controller
             name="hourlyRate"
@@ -118,6 +142,17 @@ export const ServiceForm: React.FC = () => {
               />
             )}
           />
+
+          <TextField
+            label="Quantity *"
+            type="number"
+            value={quantity}
+            onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))}
+            fullWidth
+            size="small"
+            inputProps={{ min: 1, step: 1 }}
+            variant="outlined"
+          />
         </Box>
 
         {selectedServiceOption && (
@@ -125,15 +160,18 @@ export const ServiceForm: React.FC = () => {
             <Typography variant="body2" color="textSecondary" sx={{ mb: 1 }}>
               Estimated Details:
             </Typography>
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr' }, gap: 1 }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr 1fr', sm: '1fr 1fr 1fr 1fr' }, gap: 1 }}>
               <Typography variant="body2">
-                <strong>Minutes:</strong> {selectedServiceOption.minutes}
+                <strong>Minutes:</strong> {minutesToUse}
               </Typography>
               <Typography variant="body2">
                 <strong>Rate:</strong> £{(hourlyRate || 0).toFixed(2)}/hr
               </Typography>
+              <Typography variant="body2">
+                <strong>Base Price:</strong> {formatCurrency(basePrice)}
+              </Typography>
               <Typography variant="body2" sx={{ color: '#667eea', fontWeight: 600 }}>
-                <strong>Price:</strong> {formatCurrency(estimatedPrice)}
+                <strong>Total Price:</strong> {formatCurrency(estimatedPrice)}
               </Typography>
             </Box>
           </Box>

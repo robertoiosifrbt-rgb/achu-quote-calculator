@@ -99,6 +99,12 @@ export const generateQuoteNumber = (): string => {
   return `QT-${timestamp}-${random}`;
 };
 
+export const generateInvoiceNumber = (): string => {
+  const timestamp = Date.now();
+  const random = Math.floor(Math.random() * 10000);
+  return `INV-${timestamp}-${random}`;
+};
+
 export const getServiceDefinition = (serviceType: string) => {
   return SERVICE_DEFINITIONS.find((service) => service.name === serviceType);
 };

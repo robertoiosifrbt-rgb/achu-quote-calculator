@@ -231,15 +231,17 @@ export const generateInvoicePDF = async (quoteData: QuoteData, summary: QuoteSum
   doc.setFont('helvetica', 'normal');
 
   const summaryData: Array<[string, string]> = [
-    ['Subtotal:', formatCurrency(summary.subtotal)],
-    ...(summary.discountAmount > 0
-      ? [[
+  ['Subtotal:', formatCurrency(summary.subtotal)],
+  ...(summary.discountAmount > 0
+    ? [
+        [
           'Discount:',
           `-${formatCurrency(summary.discountAmount)}`,
-        ]]
-      : []),
-    ['Grand Total:', formatCurrency(summary.grandTotal)],
-  ];
+        ] as [string, string],
+      ]
+    : []),
+  ['Grand Total:', formatCurrency(summary.grandTotal)],
+];
 
   const columnWidth = (pageWidth - margin * 2) / 2;
 

@@ -8,13 +8,13 @@ export const SERVICE_DEFINITIONS: ServiceDefinition[] = [
       { label: 'Bathroom', minutes: 35 },
       { label: 'Kitchen', minutes: 45 },
       { label: 'Living Room', minutes: 30 },
-      { label: 'Hallway', minutes: 10 },
+      { label: 'Hallway', minutes: 20 },
     ],
   },
   {
     name: 'Deep Cleaning',
     options: [
-      { label: 'Bedroom', minutes: 35 },
+      { label: 'Bedroom', minutes: 60 },
       { label: 'Bathroom', minutes: 60 },
       { label: 'Kitchen', minutes: 75 },
       { label: 'Living Room', minutes: 50 },
@@ -56,8 +56,8 @@ export const SERVICE_DEFINITIONS: ServiceDefinition[] = [
   {
     name: 'Carpet Cleaning',
     options: [
-      { label: 'Room', minutes: 30 },
-      { label: 'Stairs', minutes: 20 },
+      { label: 'Room', minutes: 45 },
+      { label: 'Stairs', minutes: 25 },
     ],
   },
   {
@@ -83,15 +83,15 @@ export const SERVICE_DEFINITIONS: ServiceDefinition[] = [
   {
     name: 'Steam Sanitisation',
     options: [
-      { label: 'Bedroom', minutes: 15 },
-      { label: 'Bathroom', minutes: 20 },
-      { label: 'Kitchen', minutes: 20 },
-      { label: 'Living Room', minutes: 20 },
+      { label: 'Bedroom', minutes: 45 },
+      { label: 'Bathroom', minutes: 25 },
+      { label: 'Kitchen', minutes: 40 },
+      { label: 'Living Room', minutes: 35 },
     ],
   },
 ];
 
-export const DEFAULT_HOURLY_RATE = 28;
+export const DEFAULT_HOURLY_RATE = 30;
 
 export const generateQuoteNumber = (): string => {
   const timestamp = Date.now();

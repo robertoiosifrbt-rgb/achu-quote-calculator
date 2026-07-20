@@ -56,13 +56,13 @@ const fetchSvg = async (path: string): Promise<string> => {
 
 // Social media and contact icons - will be converted to PNG in the function
 const SOCIAL_ICONS_SVG = {
-  phone: '/src/assets/icons/phone.svg',
-  email: '/src/assets/icons/email.svg',
-  website: '/src/assets/icons/website.svg',
-  facebook: '/src/assets/icons/facebook.svg',
-  instagram: '/src/assets/icons/instagram.svg',
-  tiktok: '/src/assets/icons/tiktok.svg',
-  youtube: '/src/assets/icons/youtube.svg',
+  phone: `${import.meta.env.BASE_URL}src/assets/icons/phone.svg`,
+  email: `${import.meta.env.BASE_URL}src/assets/icons/email.svg`,
+  website: `${import.meta.env.BASE_URL}src/assets/icons/website.svg`,
+  facebook: `${import.meta.env.BASE_URL}src/assets/icons/facebook.svg`,
+  instagram: `${import.meta.env.BASE_URL}src/assets/icons/instagram.svg`,
+  tiktok: `${import.meta.env.BASE_URL}src/assets/icons/tiktok.svg`,
+  youtube: `${import.meta.env.BASE_URL}src/assets/icons/youtube.svg`,
 };
 
 export const generatePDF = async (quoteData: QuoteData, summary: QuoteSummary): Promise<void> => {

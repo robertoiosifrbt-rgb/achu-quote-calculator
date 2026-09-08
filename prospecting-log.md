@@ -50,12 +50,24 @@ Persistent exclusions:
 | D Boast Window Cleaning | dboastwindowcleaning@hotmail.com | UK | previews/d-boast-window-cleaning.html | Sent; no immediate bounce/reply |
 | Joe Turner Painter & Decorator | josephturner15@outlook.com | LL17, Wales | previews/joe-turner-painter-decorator-ll17.html | Sent; no immediate bounce/reply |
 
+## 2026-09-08 23:04 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| G L Window Cleaning Basingstoke | greg2020@gmail.com | Basingstoke | previews/gl-window-cleaning-basingstoke.html | Sent; no immediate bounce/reply |
+| Lcl Decorators Painter Decorator | lcl.decorators32@gmail.com | Portsmouth | previews/lcl-decorators-portsmouth.html | Sent; no immediate bounce/reply |
+| Southport Window Cleaners | southportwindowcleaners@gmail.com | Southport | previews/southport-window-cleaners.html | Sent; no immediate bounce/reply |
+| Arundel Handyman | arundelhandyman@yahoo.co.uk | Yapton, West Sussex | previews/arundel-handyman-yapton.html | Sent; no immediate bounce/reply |
+| Nick Thomas Home & Garden Maintenance | nickrepairs@hotmail.com | Gloucestershire | previews/nick-thomas-home-garden-maintenance.html | Sent; no immediate bounce/reply |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
 - j.lambie Property Maintenance / johnlambie7@gmail.com was found during a prior run but excluded after Gmail confirmed it had already been contacted on 2026-09-07; a temporary duplicate preview created during validation was removed before outreach.
 - Sean Dodds Painter & Decorator was excluded in the 22:04 run because seandoddsdecorator.co.uk is active.
 - GM Gardening Services Limited was excluded in the 22:04 run because gmgardeningservices.co.uk is active.
+- North Coast Window Cleaning Services was excluded in the 23:04 run because an active standalone Webnode site was found.
+- Thomas Lee House and Garden Maintenance was not contacted in the 23:04 run because the same public contact details are also associated with Cleeve Fencing, creating business-identity ambiguity.
 - C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
 - Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

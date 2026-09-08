@@ -34,11 +34,11 @@ Persistent exclusions:
 
 | Business | Public email | Location | Preview | Status |
 |---|---|---|---|---|
-| Clean and Easy | cleanandeasy123@gmail.com | Mortimer, Berkshire | previews/clean-and-easy-window-cleaning-mortimer.html | Sent; pending bounce/reply check |
-| C Williams Property Services | chriscwps@gmail.com | Burghfield Common, Berkshire | previews/c-williams-property-services-burghfield-common.html | Sent; pending bounce/reply check |
-| Vaux's Garden Maintenance | billyvaux@gmail.com | Chipping Ongar, Essex | previews/vauxs-garden-maintenance-chipping-ongar.html | Sent; pending bounce/reply check |
-| Woking Property Maintenance | wokingpropertymaintenance@gmail.com | Woking, Surrey | previews/woking-property-maintenance.html | Sent; pending bounce/reply check |
-| Franks Garden Services | fdsummer@gmail.com | Mortimer, Berkshire | previews/franks-garden-services-mortimer.html | Sent; pending bounce/reply check |
+| Clean and Easy | cleanandeasy123@gmail.com | Mortimer, Berkshire | previews/clean-and-easy-window-cleaning-mortimer.html | Sent; no immediate bounce/reply |
+| C Williams Property Services | chriscwps@gmail.com | Burghfield Common, Berkshire | previews/c-williams-property-services-burghfield-common.html | Sent; automatic acknowledgement received; no action required yet |
+| Vaux's Garden Maintenance | billyvaux@gmail.com | Chipping Ongar, Essex | previews/vauxs-garden-maintenance-chipping-ongar.html | Sent; no immediate bounce/reply |
+| Woking Property Maintenance | wokingpropertymaintenance@gmail.com | Woking, Surrey | previews/woking-property-maintenance.html | Sent; no immediate bounce/reply |
+| Franks Garden Services | fdsummer@gmail.com | Mortimer, Berkshire | previews/franks-garden-services-mortimer.html | Sent; no immediate bounce/reply |
 
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.

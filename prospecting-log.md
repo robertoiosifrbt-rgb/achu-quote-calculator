@@ -40,8 +40,22 @@ Persistent exclusions:
 | Woking Property Maintenance | wokingpropertymaintenance@gmail.com | Woking, Surrey | previews/woking-property-maintenance.html | Sent; no immediate bounce/reply |
 | Franks Garden Services | fdsummer@gmail.com | Mortimer, Berkshire | previews/franks-garden-services-mortimer.html | Sent; no immediate bounce/reply |
 
+## 2026-09-08 22:04 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Clean Cut Gardening Services | clean.cut1995@hotmail.co.uk | Pease Pottage / Wisborough Green, West Sussex | previews/clean-cut-gardening-pease-pottage.html | Sent; no immediate bounce/reply |
+| H20 Window Cleaning | malcolmvaughan34@gmail.com | Maidenbower / Crawley | previews/h20-window-cleaning-crawley.html | Sent; no immediate bounce/reply |
+| Window Cleaning Plus | windowcleaningplus@hotmail.co.uk | Grimsby / North Lincolnshire | previews/window-cleaning-plus-grimsby.html | Sent; no immediate bounce/reply |
+| D Boast Window Cleaning | dboastwindowcleaning@hotmail.com | UK | previews/d-boast-window-cleaning.html | Sent; no immediate bounce/reply |
+| Joe Turner Painter & Decorator | josephturner15@outlook.com | LL17, Wales | previews/joe-turner-painter-decorator-ll17.html | Sent; no immediate bounce/reply |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
-- j.lambie Property Maintenance / johnlambie7@gmail.com was found during this run but excluded after Gmail confirmed it had already been contacted on 2026-09-07; a temporary duplicate preview created during validation was removed before outreach.
+- j.lambie Property Maintenance / johnlambie7@gmail.com was found during a prior run but excluded after Gmail confirmed it had already been contacted on 2026-09-07; a temporary duplicate preview created during validation was removed before outreach.
+- Sean Dodds Painter & Decorator was excluded in the 22:04 run because seandoddsdecorator.co.uk is active.
+- GM Gardening Services Limited was excluded in the 22:04 run because gmgardeningservices.co.uk is active.
+- C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
+- Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

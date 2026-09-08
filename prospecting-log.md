@@ -8,6 +8,7 @@ Persistent exclusions:
 - dynaproservicesltd@gmail.com — bounced.
 - chdecorating1@gmail.com — bounced.
 - abidhandymanserviceswindsor@gmail.com — bounced.
+- buchanandecorstors@hotmail.com — bounced.
 
 ## 2026-09-08 batch
 
@@ -29,7 +30,18 @@ Persistent exclusions:
 | Tony Thorpe Painter & Decorator | tonys.thorpe@gmail.com | Weymouth | previews/tony-thorpe-painter-decorator-weymouth.html | Sent; no immediate bounce/reply |
 | L J Henderson Painter & Decorator | ljhendersondecorator@gmail.com | Newburgh, Fife | previews/lj-henderson-painter-decorator-newburgh.html | Sent; no immediate bounce/reply |
 
+## 2026-09-08 late evening batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Clean and Easy | cleanandeasy123@gmail.com | Mortimer, Berkshire | previews/clean-and-easy-window-cleaning-mortimer.html | Sent; pending bounce/reply check |
+| C Williams Property Services | chriscwps@gmail.com | Burghfield Common, Berkshire | previews/c-williams-property-services-burghfield-common.html | Sent; pending bounce/reply check |
+| Vaux's Garden Maintenance | billyvaux@gmail.com | Chipping Ongar, Essex | previews/vauxs-garden-maintenance-chipping-ongar.html | Sent; pending bounce/reply check |
+| Woking Property Maintenance | wokingpropertymaintenance@gmail.com | Woking, Surrey | previews/woking-property-maintenance.html | Sent; pending bounce/reply check |
+| Franks Garden Services | fdsummer@gmail.com | Mortimer, Berkshire | previews/franks-garden-services-mortimer.html | Sent; pending bounce/reply check |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
+- j.lambie Property Maintenance / johnlambie7@gmail.com was found during this run but excluded after Gmail confirmed it had already been contacted on 2026-09-07; a temporary duplicate preview created during validation was removed before outreach.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

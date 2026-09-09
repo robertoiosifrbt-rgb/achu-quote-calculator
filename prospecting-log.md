@@ -10,6 +10,7 @@ Persistent exclusions:
 - abidhandymanserviceswindsor@gmail.com — bounced.
 - buchanandecorstors@hotmail.com — bounced.
 - macshednewry@hotmail.com — bounced.
+- dlpropertymaintenance.roofing@gmail.com — bounced.
 
 ## 2026-09-08 batch
 
@@ -79,6 +80,16 @@ Persistent exclusions:
 | Sheffield Greenman Gardening Services | sheffieldgreenman@gmail.com | Sheffield | previews/sheffield-greenman-gardening-services.html | Sent; no immediate bounce/reply |
 | Duncan James - Gardener - Nottingham Gardening Services | duncanjames131@gmail.com | Nottingham | previews/duncan-james-nottingham-gardening-services.html | Sent; no immediate bounce/reply |
 | Dion’s Gardening Ltd | dionrandle223@gmail.com | Alvechurch / Birmingham | previews/dions-gardening-ltd-alvechurch.html | Sent; no immediate bounce/reply |
+
+## 2026-09-09 02:04 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Lawrance Little Painter & Decorator | lawrancelittle@hotmail.co.uk | Dumfries, Scotland | previews/lawrance-little-painter-decorator-dumfries.html | Sent; no immediate bounce/reply |
+| Norwich Pressure Washing & Window Cleaning | norwichpwandwindowcleaning@yahoo.com | Norwich | previews/norwich-pressure-washing-window-cleaning.html | Sent; no immediate bounce/reply |
+| JLH Property Maintenance & Landscape Gardening | jasonholding727@gmail.com | Auldearn / Nairn, Scotland | previews/jlh-property-maintenance-nairn.html | Sent; no immediate bounce/reply |
+| D L Roofing & Property Maintenance | dlpropertymaintenance.roofing@gmail.com | Irvine, North Ayrshire | previews/dl-roofing-property-maintenance-irvine.html | BOUNCED immediately — do not contact again |
+| Advanced Plastering | advancedplasteringuk@gmail.com | Trowbridge | previews/advanced-plastering-trowbridge.html | Sent; no immediate bounce/reply |
 
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.

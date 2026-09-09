@@ -71,6 +71,15 @@ Persistent exclusions:
 | Gary Thornton Handyman Services | garythornton09@hotmail.com | Bradford | previews/gary-thornton-handyman-services-bradford.html | Sent; no immediate bounce/reply |
 | Hilton Window Cleaners | hiltonwcleaners@outlook.com | Stow Maries / Chelmsford | previews/hilton-window-cleaners-stow-maries.html | Sent; no immediate bounce/reply |
 
+## 2026-09-09 01:02 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Handy Chris | handychris89@outlook.com | Torpoint / Millbrook, Cornwall | previews/handy-chris-torpoint.html | Sent; awaiting immediate bounce/reply check |
+| Sheffield Greenman Gardening Services | sheffieldgreenman@gmail.com | Sheffield | previews/sheffield-greenman-gardening-services.html | Sent; awaiting immediate bounce/reply check |
+| Duncan James - Gardener - Nottingham Gardening Services | duncanjames131@gmail.com | Nottingham | previews/duncan-james-nottingham-gardening-services.html | Sent; awaiting immediate bounce/reply check |
+| Dion’s Gardening Ltd | dionrandle223@gmail.com | Alvechurch / Birmingham | previews/dions-gardening-ltd-alvechurch.html | Sent; awaiting immediate bounce/reply check |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
@@ -80,6 +89,7 @@ Notes:
 - North Coast Window Cleaning Services was excluded in the 23:04 run because an active standalone Webnode site was found.
 - Thomas Lee House and Garden Maintenance was not contacted in the 23:04 run because the same public contact details are also associated with Cleeve Fencing, creating business-identity ambiguity.
 - Sunshine Gardening Services in Southampton was not contacted in the 00:04 run because current search results surfaced multiple similarly named businesses with active standalone sites, creating enough identity ambiguity to exclude rather than risk contacting the wrong business.
+- Clearview Window Cleaning Services was not contacted in the 01:02 run because search results surfaced several different UK businesses using the same or nearly identical name and multiple active standalone websites; identity was too ambiguous for safe outreach.
 - C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
 - Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

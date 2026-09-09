@@ -119,6 +119,22 @@ Persistent exclusions:
 | Empire External Maintenance | eem.northeast@outlook.com | South Shields | previews/empire-external-maintenance-south-shields.html | Sent; no immediate bounce/reply |
 | R.J.K Decorating | minifill@hotmail.com | Newcastle upon Tyne / Kenton | previews/rjk-decorating-newcastle.html | Sent; no immediate bounce/reply |
 
+## 2026-09-09 06:05 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Land Girl Gardening | s.wiltshire@hotmail.co.uk | Grantham | previews/land-girl-gardening-grantham.html | Sent; no immediate bounce/reply |
+| Harrison Gardening | lukeh1978@hotmail.co.uk | Truro | previews/harrison-gardening-truro.html | Sent; no immediate bounce/reply |
+| Squekeyclean | squekeyclean@gmail.com | Bury St Edmunds | previews/squekeyclean-bury-st-edmunds.html | Sent; no immediate bounce/reply |
+
+## 2026-09-09 07:04 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Avo Construct Ltd | alexalyoprea9@gmail.com | Northampton | previews/avo-construct-ltd-northampton.html | Sent; no immediate bounce/reply |
+| Roofing-Ltd | ccahill822@gmail.com | Birmingham | previews/roofing-ltd-birmingham.html | Sent; no immediate bounce/reply |
+| Bakker & Bakker Plastering | bakkerplastering@gmail.com | Leicester | previews/bakker-bakker-plastering-leicester.html | Sent; no immediate bounce/reply |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent is an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
@@ -132,4 +148,6 @@ Notes:
 - Window Magic Cleaning was excluded because directory results still surfaced its dedicated domain and site status was ambiguous.
 - C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
 - Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
+- M Allen Roofing Ltd was excluded in this run because an active standalone website at mallenroofing.co.uk was found.
+- Will Do Ltd was excluded in this run because an active standalone website at willdoltd.co.uk was found.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

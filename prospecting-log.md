@@ -11,6 +11,9 @@ Persistent exclusions:
 - buchanandecorstors@hotmail.com — bounced.
 - macshednewry@hotmail.com — bounced.
 - dlpropertymaintenance.roofing@gmail.com — bounced.
+- lawrancelittle@hotmail.co.uk — bounced; do not contact again.
+- handymanme@btinternet.com — bounced; do not contact again.
+- hphpropertymaintenance@gmail.com — bounced; do not contact again.
 
 ## 2026-09-08 batch
 
@@ -68,7 +71,7 @@ Persistent exclusions:
 |---|---|---|---|---|
 | Ben Weston LTD Painter & Decorator | benweston15@hotmail.com | Weston-super-Mare | previews/ben-weston-painter-decorator-weston-super-mare.html | Sent; no immediate bounce/reply |
 | D.R. Sams Ltd | dr.sams@hotmail.com | Weymouth, Dorset | previews/dr-sams-painter-decorator-weymouth.html | Sent; no immediate bounce/reply |
-| Joinery & Handyman Services | macshednewry@hotmail.com | Newry, Northern Ireland | previews/joinery-handyman-services-newry.html | BOUNCED immediately — do not contact again |
+| Joinery & Handyman Services | macshednewry@hotmail.com | Newry, Northern Ireland | previews/joinery-handyman-services-newry.html | BOUNCED — do not contact again |
 | Gary Thornton Handyman Services | garythornton09@hotmail.com | Bradford | previews/gary-thornton-handyman-services-bradford.html | Sent; no immediate bounce/reply |
 | Hilton Window Cleaners | hiltonwcleaners@outlook.com | Stow Maries / Chelmsford | previews/hilton-window-cleaners-stow-maries.html | Sent; no immediate bounce/reply |
 
@@ -85,11 +88,11 @@ Persistent exclusions:
 
 | Business | Public email | Location | Preview | Status |
 |---|---|---|---|---|
-| Lawrance Little Painter & Decorator | lawrancelittle@hotmail.co.uk | Dumfries, Scotland | previews/lawrance-little-painter-decorator-dumfries.html | Sent; no immediate bounce/reply |
-| Norwich Pressure Washing & Window Cleaning | norwichpwandwindowcleaning@yahoo.com | Norwich | previews/norwich-pressure-washing-window-cleaning.html | Sent; no immediate bounce/reply |
-| JLH Property Maintenance & Landscape Gardening | jasonholding727@gmail.com | Auldearn / Nairn, Scotland | previews/jlh-property-maintenance-nairn.html | Sent; no immediate bounce/reply |
-| D L Roofing & Property Maintenance | dlpropertymaintenance.roofing@gmail.com | Irvine, North Ayrshire | previews/dl-roofing-property-maintenance-irvine.html | BOUNCED immediately — do not contact again |
-| Advanced Plastering | advancedplasteringuk@gmail.com | Trowbridge | previews/advanced-plastering-trowbridge.html | Sent; no immediate bounce/reply |
+| Lawrance Little Painter & Decorator | lawrancelittle@hotmail.co.uk | Dumfries, Scotland | previews/lawrance-little-painter-decorator-dumfries.html | BOUNCED after initial check — do not contact again |
+| Norwich Pressure Washing & Window Cleaning | norwichpwandwindowcleaning@yahoo.com | Norwich | previews/norwich-pressure-washing-window-cleaning.html | Sent; no known reply |
+| JLH Property Maintenance & Landscape Gardening | jasonholding727@gmail.com | Auldearn / Nairn, Scotland | previews/jlh-property-maintenance-nairn.html | Sent; no known reply |
+| D L Roofing & Property Maintenance | dlpropertymaintenance.roofing@gmail.com | Irvine, North Ayrshire | previews/dl-roofing-property-maintenance-irvine.html | BOUNCED — do not contact again |
+| Advanced Plastering | advancedplasteringuk@gmail.com | Trowbridge | previews/advanced-plastering-trowbridge.html | Sent; no known reply |
 
 ## 2026-09-09 03:00 batch
 
@@ -97,20 +100,36 @@ Persistent exclusions:
 |---|---|---|---|---|
 | Puckeridge Gardener | puckeridgegardener@hotmail.co.uk | Buntingford / Puckeridge, Hertfordshire | previews/puckeridge-gardener-buntingford.html | Sent; no immediate bounce/reply |
 | A & M Bruce Painter & Decorator | alan.wb@outlook.com | Edderton, Scotland | previews/a-m-bruce-painter-decorator-edderton.html | Sent; no immediate bounce/reply |
-| Handyman-Me | handymanme@btinternet.com | Garelochhead / Helensburgh, Scotland | previews/handyman-me-helensburgh.html | Sent; no immediate bounce/reply |
-| Coastal Gardens | coastalgardens2012@hotmail.com | North Shields / Tynemouth | previews/coastal-gardens-north-shields.html | Sent; no immediate bounce/reply |
+| Handyman-Me | handymanme@btinternet.com | Garelochhead / Helensburgh, Scotland | previews/handyman-me-helensburgh.html | BOUNCED after initial check — do not contact again |
+| Coastal Gardens | coastalgardens2012@hotmail.com | North Shields / Tynemouth | previews/coastal-gardens-north-shields.html | Sent; no known reply |
+
+## 2026-09-09 04:03 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| SP Property Maintenance Ltd | spproperty@btinternet.com | Middle Barton | preview created in previews/ | Sent; no known reply |
+| HPH Property Maintenance Ltd | hphpropertymaintenance@gmail.com | Prescot | preview created in previews/ | BOUNCED — do not contact again |
+| T.L.P.L Ltd | tlpl76ltd@gmail.com | St Austell | preview created in previews/ | Sent; no known reply |
+
+## 2026-09-09 05:00 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Lily Fullerton Window Cleaning | lilyfullerton@gmail.com | Forres | previews/lily-fullerton-window-cleaning-forres.html | Sent; no immediate bounce/reply |
+| Empire External Maintenance | eem.northeast@outlook.com | South Shields | previews/empire-external-maintenance-south-shields.html | Sent; no immediate bounce/reply |
+| R.J.K Decorating | minifill@hotmail.com | Newcastle upon Tyne / Kenton | previews/rjk-decorating-newcastle.html | Sent; no immediate bounce/reply |
 
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
-- Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
-- j.lambie Property Maintenance / johnlambie7@gmail.com was found during a prior run but excluded after Gmail confirmed it had already been contacted on 2026-09-07; a temporary duplicate preview created during validation was removed before outreach.
-- Sean Dodds Painter & Decorator was excluded in the 22:04 run because seandoddsdecorator.co.uk is active.
-- GM Gardening Services Limited was excluded in the 22:04 run because gmgardeningservices.co.uk is active.
-- North Coast Window Cleaning Services was excluded in the 23:04 run because an active standalone Webnode site was found.
-- Thomas Lee House and Garden Maintenance was not contacted in the 23:04 run because the same public contact details are also associated with Cleeve Fencing, creating business-identity ambiguity.
-- Sunshine Gardening Services in Southampton was not contacted in the 00:04 run because current search results surfaced multiple similarly named businesses with active standalone sites, creating enough identity ambiguity to exclude rather than risk contacting the wrong business.
-- Clearview Window Cleaning Services was not contacted in the 01:02 run because search results surfaced several different UK businesses using the same or nearly identical name and multiple active standalone websites; identity was too ambiguous for safe outreach.
-- Window Magic Cleaning was excluded in the 03:00 run because current directory results still surface its dedicated domain, even though another listing marks that domain historical; the site status was too ambiguous to contact safely.
+- Gmail Sent is an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
+- j.lambie Property Maintenance / johnlambie7@gmail.com was excluded after Gmail confirmed it had already been contacted on 2026-09-07.
+- Sean Dodds Painter & Decorator was excluded because seandoddsdecorator.co.uk is active.
+- GM Gardening Services Limited was excluded because gmgardeningservices.co.uk is active.
+- North Coast Window Cleaning Services was excluded because an active standalone Webnode site was found.
+- Thomas Lee House and Garden Maintenance was not contacted because the same public contact details are also associated with Cleeve Fencing, creating business-identity ambiguity.
+- Sunshine Gardening Services in Southampton was excluded because multiple similarly named businesses with active standalone sites created identity ambiguity.
+- Clearview Window Cleaning Services was excluded because several different UK businesses use the same or nearly identical name and multiple active standalone websites exist.
+- Window Magic Cleaning was excluded because directory results still surfaced its dedicated domain and site status was ambiguous.
 - C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
 - Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.

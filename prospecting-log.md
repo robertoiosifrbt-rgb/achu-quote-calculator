@@ -75,10 +75,10 @@ Persistent exclusions:
 
 | Business | Public email | Location | Preview | Status |
 |---|---|---|---|---|
-| Handy Chris | handychris89@outlook.com | Torpoint / Millbrook, Cornwall | previews/handy-chris-torpoint.html | Sent; awaiting immediate bounce/reply check |
-| Sheffield Greenman Gardening Services | sheffieldgreenman@gmail.com | Sheffield | previews/sheffield-greenman-gardening-services.html | Sent; awaiting immediate bounce/reply check |
-| Duncan James - Gardener - Nottingham Gardening Services | duncanjames131@gmail.com | Nottingham | previews/duncan-james-nottingham-gardening-services.html | Sent; awaiting immediate bounce/reply check |
-| Dion’s Gardening Ltd | dionrandle223@gmail.com | Alvechurch / Birmingham | previews/dions-gardening-ltd-alvechurch.html | Sent; awaiting immediate bounce/reply check |
+| Handy Chris | handychris89@outlook.com | Torpoint / Millbrook, Cornwall | previews/handy-chris-torpoint.html | Sent; no immediate bounce/reply |
+| Sheffield Greenman Gardening Services | sheffieldgreenman@gmail.com | Sheffield | previews/sheffield-greenman-gardening-services.html | Sent; no immediate bounce/reply |
+| Duncan James - Gardener - Nottingham Gardening Services | duncanjames131@gmail.com | Nottingham | previews/duncan-james-nottingham-gardening-services.html | Sent; no immediate bounce/reply |
+| Dion’s Gardening Ltd | dionrandle223@gmail.com | Alvechurch / Birmingham | previews/dions-gardening-ltd-alvechurch.html | Sent; no immediate bounce/reply |
 
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.

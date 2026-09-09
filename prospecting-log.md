@@ -91,6 +91,15 @@ Persistent exclusions:
 | D L Roofing & Property Maintenance | dlpropertymaintenance.roofing@gmail.com | Irvine, North Ayrshire | previews/dl-roofing-property-maintenance-irvine.html | BOUNCED immediately — do not contact again |
 | Advanced Plastering | advancedplasteringuk@gmail.com | Trowbridge | previews/advanced-plastering-trowbridge.html | Sent; no immediate bounce/reply |
 
+## 2026-09-09 03:00 batch
+
+| Business | Public email | Location | Preview | Status |
+|---|---|---|---|---|
+| Puckeridge Gardener | puckeridgegardener@hotmail.co.uk | Buntingford / Puckeridge, Hertfordshire | previews/puckeridge-gardener-buntingford.html | Sent; no immediate bounce/reply |
+| A & M Bruce Painter & Decorator | alan.wb@outlook.com | Edderton, Scotland | previews/a-m-bruce-painter-decorator-edderton.html | Sent; no immediate bounce/reply |
+| Handyman-Me | handymanme@btinternet.com | Garelochhead / Helensburgh, Scotland | previews/handyman-me-helensburgh.html | Sent; no immediate bounce/reply |
+| Coastal Gardens | coastalgardens2012@hotmail.com | North Shields / Tynemouth | previews/coastal-gardens-north-shields.html | Sent; no immediate bounce/reply |
+
 Notes:
 - Exact business names/contact details for logged batches were taken from current public directory/search results and each prospect was separately searched for a standalone website before contact.
 - Gmail Sent contains earlier outreach from 2026-09-08 that predates or is not fully mirrored in this Markdown log. Gmail Sent is therefore an authoritative dedupe source in addition to this file; never re-contact any address already present there unless replying to a genuine inbound response.
@@ -101,6 +110,7 @@ Notes:
 - Thomas Lee House and Garden Maintenance was not contacted in the 23:04 run because the same public contact details are also associated with Cleeve Fencing, creating business-identity ambiguity.
 - Sunshine Gardening Services in Southampton was not contacted in the 00:04 run because current search results surfaced multiple similarly named businesses with active standalone sites, creating enough identity ambiguity to exclude rather than risk contacting the wrong business.
 - Clearview Window Cleaning Services was not contacted in the 01:02 run because search results surfaced several different UK businesses using the same or nearly identical name and multiple active standalone websites; identity was too ambiguous for safe outreach.
+- Window Magic Cleaning was excluded in the 03:00 run because current directory results still surface its dedicated domain, even though another listing marks that domain historical; the site status was too ambiguous to contact safely.
 - C Williams Property Services has only sent an automatic acknowledgement so far; no action required yet.
 - Luke Smith Tree Surgeon sent an automatic out-of-office reply; no action required.
 - Do not re-contact any address with a recorded bounce, decline, opt-out, or explicit refusal.
